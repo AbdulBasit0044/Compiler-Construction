@@ -1,3 +1,8 @@
+//ABDUL BASIT
+//193227
+//BSCS-6B
+
+
 #include<stdio.h>
 #include<ctype.h>
 void FIRST(char[], char);
@@ -12,7 +17,8 @@ int main()
 	char result[20];
 	printf("How many number of productions ? :");
 	scanf(" %d", &numOfProductions);
-	for (i = 0; i < numOfProductions; i++)//read production string eg: E=E+T
+	//READING STRINGS
+	for (i = 0; i < numOfProductions; i++)
 	{
 		printf("Enter productions Number %d : ", i + 1);
 		scanf(" %s", productionSet[i]);
@@ -21,20 +27,20 @@ int main()
 	{
 		printf("\n Find the FIRST of  :");
 		scanf(" %c", &c);
-		FIRST(result, c); //Compute FIRST; Get Answer in 'result' array
+		//COMPUTING STRINGS FOR ARRAY
+		FIRST(result, c);
 		printf("\n FIRST(%c)= { ", c);
 		for (i = 0; result[i] != '\0'; i++)
-			printf(" %c ", result[i]);       //Display result
+			printf(" %c ", result[i]);
 		printf("}\n");
 		printf("press 'y' to continue : ");
 		scanf(" %c", &choice);
 	} while (choice == 'y' || choice == 'Y');
 }
-/*
-*Function FIRST:
-*Compute the elements in FIRST(c) and write them
-*in Result Array.
-*/
+
+
+//COMPUTING ELEMENTS OF STRING AND PUT THEM IN ARRAY
+
 void FIRST(char* Result, char c)
 {
 	int i, j, k;
